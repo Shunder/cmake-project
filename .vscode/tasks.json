@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "options": {
+        "cwd": "${workspaceFolder}/output/"
+    },
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "clear",
+            "command": "clear"
+        },
+        {
+            "label": "cmake",
+            "command": "cmake",
+            "args": [
+                "..",
+                "-G",
+                "MinGW Makefiles"
+            ],
+            "detail": "执行cmake .."
+        },
+        {
+            "label": "make",
+            "command": "mingw32-make.exe",
+            "args": [
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "执行mingw32-make.exe"
+        },
+        {
+            "type": "shell",
+            "label": "Cmake Build",
+            "dependsOn":[
+                "cmake",
+                "make"
+            ]
+            
+        },
+        {
+            "type": "shell",
+            "label": "oneclickBuild",
+            "command":[
+                "clear & cmake .. & mingw32-make.exe & output/hello.exe"
+            ]
+            
+        }
+    ]
+}
