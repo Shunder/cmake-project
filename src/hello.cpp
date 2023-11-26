@@ -1,12 +1,11 @@
-
 #include "hello.h"
 
 #include <iostream>
 
 using namespace std;
 
-int main()
+int hello()
 {
-    ShowStr("hello, world!");
+    cout << "hello, world!" << endl;
     return 0;
 }
