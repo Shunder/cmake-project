@@ -19,7 +19,8 @@ set(CMAKE_CXX_COMPILER g++)
 set(CMAKE_MAKE_PROGRAM ninja)
 
 # 设置编译选项
-
+# 生成编译数据库
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 # 添加头文件目录
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
@@ -36,6 +37,5 @@ target_include_directories(main PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 # 将动态库链接给可执行文件
 target_link_libraries(main hello)
 
-
 # 链接Google Test库
-# target_link_libraries(hello gtest)
+# target_link_libraries(main gtest)
