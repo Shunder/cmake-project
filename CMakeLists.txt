@@ -13,7 +13,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 # 设置编译器
 set(CMAKE_C_COMPILER gcc)
-set(CMAKE_CXX_COMPILER g++)
+set(CMAKE_CXX_COMPILER D:/Work/Code/mingw64/bin/g++.exe)
 
 # 使用 ninja 工具进行构建
 set(CMAKE_MAKE_PROGRAM ninja)
@@ -38,4 +38,5 @@ target_include_directories(main PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
 target_link_libraries(main hello)
 
 # 链接Google Test库
+# add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/include/googletest-1.14.0/googletest)
 # target_link_libraries(main gtest)
